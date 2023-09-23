@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Questrial&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --title-fonts: "Questrial", sans-serif;
+  --para-fonts: "Quattrocento", serif;
+  --title-color: #4a423b;
+  --btn-color: #6d3a49;
+  --bg-color: #fff0da;
+}
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  min-height: 60vh;
+  background-color: var(--bg-color);
+  width: 100%;
+}
+.wrapper header {
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 1em 0px;
+  align-items: center;
+  height: 4em;
+}
+.wrapper nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+
+.hamburger {
+  width: 1.8em;
+  aspect-ratio: 1/2;
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+}
+.logo-container {
+  cursor: pointer;
+}
+.logo-container img {
+  width: 100%;
+  object-fit: contain;
+}
+/* ============Hamburger============ */
+.hamburger .lines {
+  width: 100%;
+  height: 3px;
+  background-color: var(--title-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  transition: transform 0.5s, background-color 0.5s, width 0.5s;
+}
+.hamburger .line1 {
+  transform: translate(-50%, -13px);
+}
+.hamburger .line1 {
+  transform: translate(-50%, -13px);
+}
+.hamburger .line3 {
+  transform: translate(-50%, 9px);
+}
+
+/* ========toggle=== */
+
+.openmenu .line1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: red;
+}
+.openmenu .line3 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: red;
+}
+.openmenu .line2 {
+  width: 0px;
+}
+
+.showmenu {
+  display: flex;
+  position: fixed;
+  background-color: var(--bg-color);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  flex-flow: column;
+  padding: 3.5em 3em 0px;
+  transition: all 0.5s;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+/* ============Hamburger============ */
+nav a {
+  font-family: var(--title-fonts);
+  font-size: 1.2rem;
+}
+nav ul li a {
+  color: var(--title-color);
+}
+nav ul li a:hover {
+  color: #6d3a49;
+}
+.btn-container {
+  cursor: pointer;
+}
+.btn-container a {
+  color: antiquewhite;
+  display: inline-block;
+  background-color: var(--btn-color);
+  padding: 0.5em 1.6em;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  color: antiquewhite;
+  display: inline-block;
+  font-size: 1.125rem;
+  transition: 0.5s;
+}
+.btn-container:hover a {
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  background: transparent;
+}
+
+.hero-grid {
+  max-width: 90%;
+  margin: 0px auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0px;
+  row-gap: 2em;
+  /* position: relative; */
+}
+.hero-title-container {
+  display: flex;
+  justify-content: center;
+}
+.hero-title-container h1 {
+  text-align: center;
+  font-family: var(--title-fonts);
+  color: var(--title-color);
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 4rem;
+}
+.hero-para-container {
+  display: flex;
+  justify-content: center;
+}
+.hero-para-container p {
+  text-align: center;
+  font-family: var(--para-fonts);
+  font-size: 1.125rem;
+  color: var(--title-color);
+  font-weight: 300;
+}
+.btn2-container {
+  display: flex;
+  justify-content: center;
+}
+.btn2-container a {
+  background-color: var(--btn-color);
+  padding: 0.5em 1.6em;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  color: antiquewhite;
+  width: 90%;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 1.125rem;
+  transition: 0.5s;
+  clip-path: circle(38%);
+}
+.btn2-container:hover a {
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  background: transparent;
+  clip-path: circle(100%);
+}
+.hero-img-container {
+  width: 100%;
+}
+.hero-img-container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1.5rem;
+}
+
+/* ====================================MediaQueries===========================*/
+@media all and (max-width: 991px) {
+  .hero-title-container h1 {
+    font-size: 3.25rem;
+  }
+}
+@media all and (max-width: 830px) {
+  nav ul {
+    display: none;
+  }
+  nav ul li a {
+    font-size: 2rem;
+  }
+}
+@media all and (max-width: 479px) {
+  .hero-title-container h1 {
+    font-size: 2.25rem;
+  }
+
+  .btn-container {
+    display: none;
+  }
+}
+@media all and (min-width: 400px) {
+  .btn2-container {
+    display: none;
+  }
+}
+/* ====================================Media Queries======================== */
+.wrapper2 {
+  display: grid;
+  margin: 0px auto;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  padding: 5em 0px;
+  max-width: 90%;
+  justify-content: center;
+}
+.section2-title {
+  width: 100%;
+  display: flex;
+}
+.section2-title h1 {
+  font-family: var(--title-fonts);
+  color: var(--title-color);
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 3rem;
+  margin: 1rem 0px;
+}
+.section2-para p {
+  font-family: var(--para-fonts);
+  font-size: 1.125rem;
+  color: var(--title-color);
+  font-weight: 300;
+  object-fit: fill;
+  line-height: 1.5;
+  margin: 0rem 0px 2rem;
+}
+.section2-div2 {
+  display: flex;
+  justify-content: baseline;
+}
+.section2-div2 .img-1 {
+  width: 100%;
+}
+
+.section2-div2 .img-1 img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.aboutus-btn a {
+  padding: 0.5em 1.5rem;
+  border: 1px solid #6d3a49;
+  color: #6d3a49;
+  background-color: transparent;
+  font-size: 1.125rem;
+  font-family: var(--para-fonts);
+  border-radius: 2rem;
+  transition: 0.5s;
+}
+.aboutus-btn a:hover {
+  background-color: var(--btn-color);
+  color: antiquewhite;
+}
+/* ====================================MediaQueries===========================*/
+@media all and (max-width: 991px) {
+  .section2-title h1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .wrapper2 {
+    grid-template-columns: 1fr;
+  }
+  .section2-title {
+    justify-content: flex-start;
+  }
+  .section2-title h1 {
+    font-size: 2rem;
+  }
+  .section2-para p {
+    font-size: 1rem;
+  }
+
+  .section2-div2 {
+    display: none;
+  }
+}
